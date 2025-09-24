@@ -1,0 +1,88 @@
+﻿@model Monkeynetwork.ViewModels.Account.UserViewModel;
+
+<div class="block-profil background-white">
+
+    <h4 class="center">@Model.User.GetFullName()</h4>
+
+    <div class="row">
+
+        <div class="main">
+            <img class="main-img" src="https://thispersondoesnotexist.com/" alt="user's photo" />
+            <div class="center-align">
+                <form method="get" asp-controller="AccountManager" asp-action="Edit">
+                    <input class="edit_submit" type="submit" value="Редактировать" />
+                </form>
+            </div>
+        </div>
+
+
+        <div class="side">
+            <div class="lined-block">
+                <div>
+                    <label class="gray-text">Статус:</label>
+                    <label> @Model.User.Status</label>
+                </div>
+
+                <div>
+                    <label class="gray-text">Дата рождения:</label>
+                    <label> @Model.User.BirthDate.ToLongDateString()</label>
+                </div>
+
+                <div>
+                    <label class="gray-text">О себе:</label>
+                    <label> @Model.User.About</label>
+                </div>
+
+                <div>
+                    <label class="gray-text">Email:</label>
+                    <label> @Model.User.Email</label>
+                </div>
+
+            </div>
+
+            <div class="lined-block-friend friendcontainer">
+                <label class="gray-text">Список друзей</label>
+                <div>
+                     @if (Model.Friends.Count != 0)
+                {
+
+                    @foreach (var user in @Model.Friends)
+                    {
+                        <div>
+                            <div class="mrgn center-align">
+                                <img src="https://thispersondoesnotexist.co/" alt="friend's photo" class="ava" onerror="this.onerror=null; this.src='https://thispersondoesnotexist.com/';" />
+                            </div>
+                            <div class="mrgn center-align">
+                                @user.GetFullName()
+                            </div>
+                            <div class="mrgn center-align">
+                                <form asp-controller="AccountManager" asp-action="Chat" asp-route-id="@user.Id" method="post">
+                                    <button type="submit" class="btn btn-sm btn-primary min-width-but">
+                                        Чат
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="mrgn center-align">
+                                <form asp-controller="AccountManager" asp-action="DeleteFriend" asp-route-id="@user.Id" method="post">
+                                    <button type="submit" class="btn btn-sm btn-primary">
+                                        Удалить из друзей
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div>
+                        <label> У вас пока нет друзей.</label>
+                    </div>
+                }
+                </div>
+               
+
+            </div>
+        </div>
+
+    </div>
+</div>
