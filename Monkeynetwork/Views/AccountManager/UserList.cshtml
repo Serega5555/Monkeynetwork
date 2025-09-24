@@ -1,0 +1,38 @@
+﻿@model Monkeynetwork.ViewModels.Account.SearchViewModel;
+
+<div class="block-reg background-white">
+
+    @if (Model.UserList.Count != 0)
+    {
+
+        @foreach (var user in @Model.UserList)
+        {
+            <div>
+                <img class="ava" src="https://thispersondoesnotexist.com/" alt="photo" />
+                <label>@user.GetFullName()</label>
+                @if (!@user.IsFriendWithCurrent)
+                {
+                    <form asp-controller="AccountManager" asp-action="AddFriend" asp-route-id="@user.Id" method="post">
+                        <button type="submit" class="btn btn-sm btn-primary">
+                            Добавить в друзья
+                        </button>
+                    </form>
+                }
+            </div>
+        }
+    }
+    else
+    {
+        <div>
+            <label> Поиск не дал результатов.</label>
+        </div>
+    }
+    </br>
+    <div>
+    <form method="get" asp-controller="AccountManager" asp-action="MyPage">
+        <button class="arrow-btn" type="submit">
+            <i class="fas fa-arrow-left blue-icon"></i>
+        </button>
+    </form>
+</div>
+</div>
