@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@using Monkeynetwork.Models.Users;
+@inject SignInManager<User> SignInManager
+@inject UserManager<User> UserManager
+
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-end left">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <form method="post" asp-controller="AccountManager" asp-action="Logout">
+            <input class="header-button" type="submit" value="Выход" />
+        </form>
+    }
+</div>
