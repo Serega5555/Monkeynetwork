@@ -1,0 +1,41 @@
+﻿@using Monkeynetwork.ViewModels.Account
+@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="block-reg background-white">
+    <h4 class="center">Добро пожаловать!</h4>
+    <form class="frm" method="post" asp-controller="AccountManager" asp-action="Login" asp-route-returnUrl="/login">
+        <div asp-validation-summary="ModelOnly"></div>
+        <div>
+            <div class="mrgn">
+                <input asp-for="Email" class="form-control" placeholder="Введите ваш Email" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <div>
+            <div class="mrgn">
+                <input asp-for="Password" class="form-control" placeholder="Введите ваш пароль" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div>
+            <div class="mrgn checkbox-label">
+                <input asp-for="RememberMe" type="checkbox" />
+                <label asp-for="RememberMe" class="text-label"></label><br />
+            </div>
+        </div>
+        <div>
+            <input class="btn_submit" type="submit" value="Войти" />
+        </div>
+    </form>
+    <form method ="get" asp-controller="Register" asp-action="Register">
+        <div>
+            <input class="btn_submit btn_submit_add" type="submit" value="Создать аккаунт" />
+        </div>
+    </form>
+     
+    <span class="textInfo">Нажимая "Войти" вы принимаете пользовательское соглашение и политику конфиденциальности</span>
+</div>
