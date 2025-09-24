@@ -1,0 +1,300 @@
+﻿.main {
+    -ms-flex: 40%; /* IE10 */
+    flex: 40%;
+    padding: 20px;
+}
+
+.main-myPage {
+    -ms-flex: 40%; /* IE10 */
+    flex: 40%;
+    padding: 20px;
+}
+
+.main-img{
+    width: 500px;
+    height: 500px;
+}
+
+.all-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.side {
+    -ms-flex: 60%; /* IE10 */
+    flex: 60%;
+    padding: 20px;
+}
+
+.row {
+    display: -ms-flexbox; /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE10 */
+    flex-wrap: wrap;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #edeef0;
+}
+
+.topnav {
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    background-color: white;
+}
+
+.btn_submit {
+    background-color: #18659d;
+    color: white;
+    padding: 14px 10px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: 95%;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.btn_submit_add {
+    background-color: #c9ebfc;
+    color: black;
+}
+
+.edit_submit {
+    background-color: #8ed8f3 !important;
+    color: black !important;
+    padding: 5px 10px;
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+    width: 500px !important;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.frm_text {
+    width: 100%;
+}
+
+.frm {
+    width: 100%;
+    margin: 20px 15px 20px 5px;
+    margin-bottom: 20px;
+}
+
+.mrgn {
+    margin: 10px;
+}
+
+.block-reg {
+    margin: 15px auto;
+    padding: 25px;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 0 0 0, 0 0 0 1px #edeef0;
+    width: 400px;
+}
+
+.block-profil{
+    margin: 100px auto;
+    padding: 25px;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 0 0 0, 0 0 0 1px #edeef0;
+    width: 565px;
+}
+
+.block-message {
+    margin: 100px auto;
+    padding: 25px;
+    align-content: center;
+    border-radius: 10px;
+    box-shadow: 0 1px 0 0 0, 0 0 0 1px #edeef0;
+    width: 500px;
+}
+
+    .background-main {
+    background-color: #edeef0;
+}
+
+.background-white {
+    background-color: white;
+}
+
+.text-color-gray {
+    color: slategray;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    
+}
+
+.text-label{
+    color: #2c2c2c;
+    margin-left: 15px;
+}
+
+.textInfo {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.center {
+    text-align: center;
+    align-content: center;
+}
+
+.center-img {
+    text-align: center;
+    align-content: center;
+    padding: 60px 30px 30px 40px;
+    background-image: url(../cloud.png) !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    width: 900px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.enter_submit {
+    background-color: #5181b8;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.text-size_12 {
+    font-size: 15px;
+}
+
+.field-validation-error {
+    color: #b94a48;
+    font-size: 14px;
+    display: block;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.date_control {
+    width: 25%;
+    display: inline;
+    min-width: max-content;
+}
+
+.date_box {
+    width: 100%;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 300px auto;
+}
+
+.block2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 150px auto;
+}
+
+.header {
+    display: flex;
+    align-items: center; /* Выравнивание по вертикали */
+    padding: 25px;  /* Отступы */
+    background-color: white; /* Цвет фона заголовка */
+    width: 100%;
+    height: 70px
+}
+
+.header-button {
+    background-color: #ffffff; /* Цвет кнопки */
+    color: dodgerblue; /* Цвет текста кнопки */
+    border: none; /* Убираем рамку */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Указатель на кнопку */
+    border-radius: 5px; /* Скругление углов */
+    margin-left: 10px;
+}
+
+    .header-button:hover {
+        background-color: #8ed8f3;
+        color: black;
+    }
+
+    .left{
+        margin-right: 25px;
+    }
+
+.center-align {
+    align-content: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ava {
+    width: 20%;
+    max-width: max-content;
+    padding: 10px;
+}
+
+.lined-block-friend {
+    display: flex;
+    flex-wrap: wrap; /* Убирайте это, если не хотите чтобы элементы переносились на новую строку при недостатке места */
+    align-items: center; /* Для вертикального центрирования содержимого */
+    gap: 5px; /* Промежуток между элементами */
+}
+
+.friendcontainer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blue-icon {
+    color: #18659d;
+    border: none;
+    font-weight: normal;
+}
+
+.btn-primary {
+    background-color: #8ed8f3;
+    border: none;
+    color: black;
+}
