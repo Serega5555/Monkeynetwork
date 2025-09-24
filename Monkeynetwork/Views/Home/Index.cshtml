@@ -1,0 +1,24 @@
+﻿@model Monkeynetwork.ViewModels.Account.MainViewModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="all-main"> 
+    <div>
+        <div class="center-img">
+            <div>
+                Пользуйтесь нашей самой эволюционной соцсетью!
+            </div>
+            <div>
+                Регистрируйтесь всего за 2 минуты, делитесь мыслями, находите новых друзей.
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <partial name="Login" model="@Model.LoginView" />
+    </div>
+
+</div>
